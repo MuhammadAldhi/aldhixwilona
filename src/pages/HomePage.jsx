@@ -5,6 +5,7 @@ import TiltedCard from "../components/ui/TiltedCard";
 import Pictures1 from "../assets/action.png";
 import Pictures2 from "../assets/action2.png";
 import About from "./About";
+import Galery from "./Galery";
 import ElectricBorder from "../components/ui/ElectricBorder";
 
 const CARDS = [
@@ -12,7 +13,7 @@ const CARDS = [
   { img: Pictures2, name: "Wilona" },
 ];
 
-export default function Vector() {
+export default function HomePage() {
   const [screenSize, setScreenSize] = useState(320);
 
   // Update ukuran card berdasarkan lebar layar
@@ -42,7 +43,9 @@ export default function Vector() {
 
   return (
     <>
-      <div className="relative w-full h-screen bg-[#1a1d26] overflow-hidden flex items-center justify-center">
+      <div className="relative w-full h-screen bg-[#0d0f14] overflow-hidden flex items-center justify-center">
+        <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/10 blur-[120px] rounded-full" />
+        <div className="absolute botom-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full" />
 
         {/* Background Particles */}
         <div className="absolute inset-0 z-10 opacity-40">
@@ -105,6 +108,7 @@ export default function Vector() {
         </div>
       </div>
       <About />
+      <Galery />
     </>
   );
 }

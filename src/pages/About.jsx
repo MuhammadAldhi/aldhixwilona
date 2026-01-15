@@ -13,11 +13,7 @@ const TIMELINE_DATA = [
 export default function About() {
   return (
     <section id="about" className="relative w-full min-h-screen md:h-screen bg-[#0d0f14] overflow-hidden flex items-center justify-center py-20 md:py-0">
-      {/* Bg Glow & Grid */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/10 blur-[120px] rounded-full" />
-      <div className="absolute inset-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'www.w3.org\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M0 40L40 0H20L0 20M40 40V20L20 40\'/%3E%3C/g%3E%3C/svg%3E")' }} />
-
+      
       <ScrollFloat textClassName="text-white/10 text-[clamp(4rem,15vw,15rem)] leading-none" containerClassName="absolute inset-0 z-99 font-Vector flex items-center justify-center pointer-events-none uppercase">
         Our Story
       </ScrollFloat>

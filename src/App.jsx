@@ -1,8 +1,7 @@
 // @ts-ignore
 
-import Vector from './pages/Vector';
-import About from './pages/About'
-import { Routes, Route, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import { Routes, Route } from 'react-router-dom';
 import TargetCursor from "./components/ui/TargetCursor";
 
 
@@ -12,8 +11,7 @@ function App() {
       <TargetCursor spinDuration={3} hideDefaultCursor={true} parallaxOn={true} />
 
       <Routes>
-        <Route path="/" element={<Vector />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </div>
   );
