@@ -3,9 +3,11 @@ import ScrollFloat from "@/components/ui/ScrollFloat";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const TIMELINE_DATA = [
-  { year: "2024", title: "Tahun Nol", tag: "Titik Mula", color: "text-blue-400", desc: "Semuanya bermula di tahun 2024. Pertemuan pertama yang canggung berubah menjadi cerita hingga larut malam." },
-  { year: "2025", title: "Membangun Dunia", tag: "Bertumbuh", color: "text-purple-400", desc: "Kita belajar kedewasaan. Mencintai bukan hanya memegang tangan saat senang, tapi tetap tinggal saat masalah datang." },
-  { year: "2026", title: "Masa Depan", tag: "Hari Ini", color: "text-pink-400", desc: "Januari 2026. Kamu tetap orang yang sama yang membuat jantungku berdegup kencang sejak hari pertama." },
+  { year: "2024", title: "Tahun Nol", tag: "Titik Mula", color: "text-blue-400", desc: "Semuanya bermula di tahun 2024. Kami di pertemukan dengan ketidak sengajaan. Pertemuan pertama yang canggung tidak pernah diduga. kita jadian tanpa gift tanpa kata tanggal 18 Okttober 2024 kita resmi berpacaran" },
+
+  { year: "2025", title: "Membangun Dunia", tag: "Bertumbuh", color: "text-purple-400", desc: "Kita belajar kedewasaan. Mencintai bukan hanya memegang tangan saat senang, tapi tetap tinggal saat masalah datang. semua kebahagian yang kita alami datang di tahun ini, semua kenangan tebuat di tahun ini" },
+
+  { year: "2026", title: "Masa Depan", tag: "Hari Ini", color: "text-pink-400", desc: "Januari 2026. Kamu tetap orang yang sama yang membuat jantungku berdegup kencang sejak hari pertama. kita akan bercinta selamanya sampai dipisahkan oleh tuhan." },
 ];
 
 export default function About() {
@@ -20,15 +22,15 @@ export default function About() {
         Our Story
       </ScrollFloat>
 
-      <div className="relative z-10 px-6">
-        <GlareHover glareOpacity={0.15} className="w-[350px] sm:w-[600px] h-[550px] rounded-[2.5rem] border border-white/10 bg-[#161922]/80 backdrop-blur-xl">
+      <div className="relative z-10 px-6 cursor-target cursor-none">
+        <GlareHover glareOpacity={0.15} className="cursor-none w-[350px] sm:w-[600px] md:w-[750px] h-[550px] rounded-[2.5rem] border border-white/10 bg-[#161922]/80 backdrop-blur-xl">
           <div className="absolute inset-0 p-8 flex flex-col italic uppercase text-white">
             <span className="font-bold">Our Story</span>
             <span className="text-[10px] tracking-[0.3em] opacity-50">2024-2026</span>
             <div className="h-1 w-12 bg-white mt-1 rounded-full" />
           </div>
 
-          <ScrollArea className="h-[400px] w-full mt-20 px-8 text-white">
+          <ScrollArea className="h-[400px] w-full cursor-none mt-20 px-8 text-white">
             <div className="text-center mb-16 space-y-2">
               <h1 className="text-5xl md:text-6xl italic opacity-90 tracking-tighter serif">Satu Detik di 2024,</h1>
               <p className="text-slate-400 uppercase tracking-[0.2em] text-[10px]">Selamanya Sejak Itu</p>

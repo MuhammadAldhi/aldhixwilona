@@ -6,7 +6,6 @@ import Pictures1 from "../assets/action.png";
 import Pictures2 from "../assets/action2.png";
 import About from "./About";
 import ElectricBorder from "../components/ui/ElectricBorder";
-import TargetCursor from "../components/ui/TargetCursor";
 
 const CARDS = [
   { img: Pictures1, name: "Aldhi" },
@@ -23,7 +22,7 @@ export default function Vector() {
       else if (window.innerWidth < 1024) setScreenSize(260); // Tablet
       else setScreenSize(320); // Desktop
     };
-    
+
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -44,10 +43,6 @@ export default function Vector() {
   return (
     <>
       <div className="relative w-full h-screen bg-[#1a1d26] overflow-hidden flex items-center justify-center">
-        {/* Cursor disembunyikan di mobile agar tidak mengganggu touch */}
-        <div className="hidden lg:block">
-          <TargetCursor spinDuration={2} hideDefaultCursor={true} parallaxOn={true} />
-        </div>
 
         {/* Background Particles */}
         <div className="absolute inset-0 z-10 opacity-40">

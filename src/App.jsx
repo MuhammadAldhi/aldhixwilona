@@ -3,11 +3,13 @@
 import Vector from './pages/Vector';
 import About from './pages/About'
 import { Routes, Route, Link } from 'react-router-dom';
+import TargetCursor from "./components/ui/TargetCursor";
 
 
 function App() {
   return (
     <div className='scroll-smooth'>
+      <TargetCursor spinDuration={3} hideDefaultCursor={true} parallaxOn={true} />
 
       <Routes>
         <Route path="/" element={<Vector />} />
