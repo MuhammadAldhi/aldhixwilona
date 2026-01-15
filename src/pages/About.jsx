@@ -22,7 +22,7 @@ export default function About() {
         Our Story
       </ScrollFloat>
 
-      <div className="relative z-10 px-6 cursor-target cursor-none">
+      <div className="relative z-10 px-6 cursor-target md:cursor-none">
         <GlareHover glareOpacity={0.15} className="cursor-none w-[350px] sm:w-[600px] md:w-[750px] h-[550px] rounded-[2.5rem] border border-white/10 bg-[#161922]/80 backdrop-blur-xl">
           <div className="absolute inset-0 p-8 flex flex-col italic uppercase text-white">
             <span className="font-bold">Our Story</span>
@@ -30,7 +30,7 @@ export default function About() {
             <div className="h-1 w-12 bg-white mt-1 rounded-full" />
           </div>
 
-          <ScrollArea className="h-[400px] w-full cursor-none mt-20 px-8 text-white">
+          <ScrollArea className="h-[400px] w-full md:cursor-none mt-20 px-8 text-white">
             <div className="text-center mb-16 space-y-2">
               <h1 className="text-5xl md:text-6xl italic opacity-90 tracking-tighter serif">Satu Detik di 2024,</h1>
               <p className="text-slate-400 uppercase tracking-[0.2em] text-[10px]">Selamanya Sejak Itu</p>
