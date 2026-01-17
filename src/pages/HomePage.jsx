@@ -8,6 +8,7 @@ import About from "./About";
 import Galery from "./Galery";
 import ElectricBorder from "../components/ui/ElectricBorder";
 import CalenderCount from "./CalenderCount";
+import DetailLokasi from "./DetailLocation";
 
 const CARDS = [
   { img: Pictures1, name: "Aldhi" },
@@ -111,6 +112,7 @@ export default function HomePage() {
       <About />
       <Galery />
       <CalenderCount />
+      <DetailLokasi />
     </>
   );
 }
