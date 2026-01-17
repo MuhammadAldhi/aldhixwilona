@@ -7,6 +7,7 @@ import Pictures2 from "../assets/action2.png";
 import About from "./About";
 import Galery from "./Galery";
 import ElectricBorder from "../components/ui/ElectricBorder";
+import CalenderCount from "./CalenderCount";
 
 const CARDS = [
   { img: Pictures1, name: "Aldhi" },
@@ -109,6 +110,7 @@ export default function HomePage() {
       </div>
       <About />
       <Galery />
+      <CalenderCount />
     </>
   );
 }
