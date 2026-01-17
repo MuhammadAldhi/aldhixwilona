@@ -13,7 +13,7 @@ const DetailLokasi = () => {
 
   const embedUrl = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d308.9731603077466!2d106.92152510789703!3d-6.121560225888603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sid!2sid!4v1768632463136!5m2!1sid!2sid";
 
-  const shareUrl = "https://maps.app.goo.gl/cmpbMf1TfLBFmfcy7";
+  const shareUrl = "https://goo.gl/maps/kduf1mWcweP4NVuQ7";
 
   return (
     // Background gelap sesuai tema HomePage
