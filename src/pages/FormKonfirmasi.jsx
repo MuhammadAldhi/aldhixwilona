@@ -171,9 +171,16 @@ export default function FormKonfirmasi() {
   return (
     <section id="about" className="relative w-full min-h-screen bg-[#0d0f14] overflow-hidden flex items-center justify-center py-20">
 
-      <ScrollFloat textClassName="text-white/5 text-[clamp(4rem,15vw,15rem)] leading-none" containerClassName="absolute inset-0 z-99 font-Vector flex items-center justify-center pointer-events-none uppercase">
-        Konfirmasi
-      </ScrollFloat>
+      {/* Container ScrollFloat: Ditambahkan w-full dan overflow-hidden */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden w-full">
+        <ScrollFloat
+          // Ukuran font clamp disesuaikan agar tidak terlalu besar di layar kecil (max 10rem)
+          textClassName="text-white/5 text-[clamp(3rem,12vw,10rem)] leading-none text-center whitespace-nowrap"
+          containerClassName="font-Vector uppercase"
+        >
+          Konfirmasi
+        </ScrollFloat>
+      </div>
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
