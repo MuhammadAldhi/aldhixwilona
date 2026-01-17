@@ -5,6 +5,7 @@ const Form = () => {
   return (
     <StyledWrapper>
       <div className="container">
+
         <div className="heading">Message</div>
         <form className="form">
           <input required className="input cursor-target" type="text" name="Nama" id="Nama" placeholder="Nama" />
@@ -18,6 +19,7 @@ const Form = () => {
 
           <input className="login-button cursor-target" type="submit" defaultValue="Kirim" />
         </form>
+
         <div className="social-account-container">
           <span className="title">Or Message With</span>
           <div className="social-accounts">
@@ -46,6 +48,7 @@ const Form = () => {
 
 const StyledWrapper = styled.div`
   .container {
+    width: 100%;
     max-width: 350px;
     background: #1a1a1a;
     background: linear-gradient(180deg, #242424 0%, #171717 100%);
@@ -53,7 +56,6 @@ const StyledWrapper = styled.div`
     padding: 25px 35px;
     border: 3px solid #333;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 30px 30px -20px;
-    margin: 20px;
   }
 
   .heading {
@@ -166,15 +168,20 @@ const StyledWrapper = styled.div`
     border-color: #25D366;
   }
 `;
-
 export default function FormKonfirmasi() {
   return (
-    <section id="about" className="relative w-full min-h-screen bg-[#0d0f14] overflow-hidden flex items-center justify-center py-20">
+    /* 
+       Gunakan min-h-screen dan min-h-[100dvh] agar di Android 
+       konten benar-benar memenuhi layar yang terlihat saja (mengabaikan address bar)
+    */
+    <section
+      id="about"
+      className="relative w-full min-h-screen md:min-h-[100dvh] bg-[#0d0f14] overflow-hidden flex items-center justify-center py-10"
+    >
 
-      {/* Container ScrollFloat: Ditambahkan w-full dan overflow-hidden */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden w-full">
+      {/* Latar Belakang ScrollFloat */}
+      <div className="absolute inset-0 z-99 flex items-center justify-center pointer-events-none overflow-hidden w-full">
         <ScrollFloat
-          // Ukuran font clamp disesuaikan agar tidak terlalu besar di layar kecil (max 10rem)
           textClassName="text-white/5 text-[clamp(3rem,12vw,10rem)] leading-none text-center whitespace-nowrap"
           containerClassName="font-Vector uppercase"
         >
@@ -182,34 +189,43 @@ export default function FormKonfirmasi() {
         </ScrollFloat>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
+      {/* 
+         Kontainer utama: 
+         - items-center & justify-center memastikan konten di tengah secara vertikal & horizontal
+         - h-full memastikan ia mengambil seluruh ruang yang tersedia
+      */}
+      <div className="relative z-10 w-full flex items-center justify-center px-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-20 w-full max-w-6xl">
+
           {/* Kolom Form */}
-          <div className="w-full max-w-[350px]">
-            <Form />
-          </div>
+          <Form />
+
 
           {/* Kolom Keterangan Konfirmasi */}
-          <div className="max-w-md text-center md:text-left space-y-6">
-            <h2 className="text-[#ffffff] font-black text-4xl md:text-5xl uppercase tracking-tighter">
+          <div className="max-w-md text-center md:text-left space-y-6 order-1 md:order-2">
+            <h2 className="text-[#ffffff] font-black text-3xl md:text-5xl uppercase tracking-tighter leading-tight">
               Konfirmasi Kehadiran
             </h2>
+
             <div className="space-y-4 text-gray-400 font-medium leading-relaxed">
-              <p className="text-lg">
+              <p className="text-sm md:text-lg">
                 Kehadiran Anda adalah suatu kehormatan dan kebahagiaan bagi kami.
               </p>
-              <div className="bg-[#1a1a1a] p-6 rounded-[30px] border-l-4 border-[#ffffff] shadow-xl">
-                <p className="text-white italic">
+
+              <div className="bg-[#1a1a1a] p-5 md:p-6 rounded-[25px] md:rounded-[30px] border-l-4 border-[#ffffff] shadow-xl">
+                <p className="text-white italic text-xs md:text-base">
                   "Mohon maaf, jika Anda berhalangan hadir, silakan isi form di samping dengan menyertakan alasan atau kirimkan pesan melalui WhatsApp/Instagram kami."
                 </p>
               </div>
-              <p className="text-sm uppercase tracking-widest text-white/40">
+
+              <p className="text-[10px] md:text-sm uppercase tracking-widest text-white/40">
                 — Terima Kasih Atas Pengertiannya —
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
-  )
+  );
 }
