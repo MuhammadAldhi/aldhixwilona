@@ -59,8 +59,8 @@ export default function CalenderCount() {
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 w-full max-w-6xl">
         {/* Sisi Countdown - Tampil DI ATAS pada Mobile (order-1), DI KANAN pada Desktop (order-2) */}
-        <div className="order-1 lg:order-2 lg:col-span-2 flex flex-col items-center justify-center p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800 backdrop-blur-sm shadow-2xl">
-          <div className="mb-8 text-center">
+        <div className="order-1 lg:order-2 lg:col-span-2 flex flex-col items-center justify-center p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800 backdrop-blur-sm shadow-2xl ">
+          <div className="mb-8 text-center ">
             <h2 className="text-sm font-bold tracking-[0.3em] text-blue-500 uppercase mb-2">
               countdown to the wedding
             </h2>
@@ -130,16 +130,16 @@ function TimeUnit({
   return (
     <div className="flex flex-col items-center group">
 
-      <div className="relative overflow-hidden bg-black/60 w-16 h-20 lg:w-20 lg:h-24 flex items-center justify-center rounded-2xl border border-zinc-800 transition-all duration-300 group-hover:border-zinc-600 shadow-xl">
+      <div className="relative overflow-hidden bg-black/60 w-16 h-20 lg:w-20 lg:h-24 flex items-center justify-center rounded-2xl border border-zinc-800 transition-all duration-300 group-hover:border-zinc-600 shadow-xl cursor-target">
         {/* Efek kilau di atas angka */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 cursor-targetbg-gradient-to-b cursor-target from-white/5 to-transparent pointer-events-none" />
         <span
           className={`text-3xl lg:text-4xl font-black font-mono tracking-tighter ${color}`}
         >
           {String(value).padStart(2, "0")}
         </span>
       </div>
-      <span className="text-[10px] lg:text-xs mt-3 uppercase tracking-widest text-zinc-500 font-bold">
+      <span className="text-[10px] lg:text-xs mt-3  uppercase tracking-widest text-zinc-500 font-bold">
         {label}
       </span>
     </div>

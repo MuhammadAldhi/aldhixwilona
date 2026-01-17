@@ -9,6 +9,7 @@ import Galery from "./Galery";
 import ElectricBorder from "../components/ui/ElectricBorder";
 import CalenderCount from "./CalenderCount";
 import DetailLokasi from "./DetailLocation";
+import FormKonfirmasi from "./FormKonfirmasi";
 
 const CARDS = [
   { img: Pictures1, name: "Aldhi" },
@@ -113,6 +114,7 @@ export default function HomePage() {
       <Galery />
       <CalenderCount />
       <DetailLokasi />
+      <FormKonfirmasi />
     </>
   );
 }
