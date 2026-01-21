@@ -2,13 +2,41 @@ import ScrollFloat from "../components/ui/ScrollFloat"
 import styled from 'styled-components';
 
 const Form = () => {
+
+const handleSubmit = (e) => {
+    e.preventDefault(); // Mencegah reload halaman
+
+    // Mengambil data dari form
+    const formData = new FormData(e.target);
+    const nama = formData.get('Nama');
+    const pesan = formData.get('message');
+
+    // Pengaturan nomor WhatsApp (Ganti dengan nomor Anda, awali dengan kode negara tanpa +)
+    const nomorWA = "6287818457387"; 
+
+    // Membuat format pesan
+    const text = `Nama ${nama}\nMessage:\n${pesan}`;
+    const encodedText = encodeURIComponent(text);
+
+    // Membuka link WhatsApp
+    const url = `https://wa.me{nomorWA}?text=${encodedText}`;
+    window.open(url, '_blank');
+  };
+  
   return (
     <StyledWrapper>
       <div className="container">
 
         <div className="heading">Message</div>
-        <form className="form">
-          <input required className="input cursor-target" type="text" name="Nama" id="Nama" placeholder="Nama" />
+        <form className="form" onSubmit={handleSubmit}>
+          <input 
+        required 
+        className="input cursor-target" 
+        type="text" 
+        name="Nama" 
+        id="Nama" 
+        placeholder="Nama" 
+      />
           <textarea
             required
             className="input textarea cursor-target"
@@ -17,7 +45,18 @@ const Form = () => {
             placeholder="Alasan"
           ></textarea>
 
-          <input className="login-button cursor-target" type="submit" defaultValue="Kirim" />
+          <textarea
+        required
+        className="input textarea cursor-target"
+        name="message"
+        id="message"
+        placeholder="Alasan"
+      ></textarea>
+          <input 
+        className="login-button cursor-target" 
+        type="submit" 
+        value="Kirim" 
+      />
         </form>
 
         <div className="social-account-container">
