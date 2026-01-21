@@ -54,7 +54,7 @@ export default function CalenderCount() {
         textClassName="text-white/10 text-[clamp(4rem,15vw,15rem)] leading-none"
         containerClassName="absolute inset-0 z-99 font-Vector flex items-center justify-center pointer-events-none uppercase"
       >
-        To Wedding
+        To BirthDay
       </ScrollFloat>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 w-full max-w-6xl">
