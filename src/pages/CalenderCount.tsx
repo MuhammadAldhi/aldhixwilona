@@ -62,7 +62,7 @@ export default function CalenderCount() {
         <div className="order-1 lg:order-2 lg:col-span-2 flex flex-col items-center justify-center p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800 backdrop-blur-sm shadow-2xl ">
           <div className="mb-8 text-center ">
             <h2 className="text-sm font-bold tracking-[0.3em] text-blue-500 uppercase mb-2">
-              countdown to the wedding
+              countdown to the birthDay
             </h2>
             <p className="text-zinc-400 text-xs italic">
               {dateRange?.to
