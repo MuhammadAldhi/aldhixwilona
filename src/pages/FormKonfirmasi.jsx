@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
     const encodedText = encodeURIComponent(text);
 
     // Membuka link WhatsApp
-    const url = `https://wa.me{nomorWA}?text=${encodedText}`;
+    const url = `https://wa.me/6287818457387?text=${encodedText}`;
     window.open(url, '_blank');
   };
   
@@ -38,20 +38,13 @@ const handleSubmit = (e) => {
         placeholder="Nama" 
       />
           <textarea
-            required
-            className="input textarea cursor-target"
-            name="message"
-            id="message"
-            placeholder="Alasan"
-          ></textarea>
-
-          <textarea
         required
         className="input textarea cursor-target"
         name="message"
         id="message"
         placeholder="Alasan"
       ></textarea>
+            
           <input 
         className="login-button cursor-target" 
         type="submit" 
