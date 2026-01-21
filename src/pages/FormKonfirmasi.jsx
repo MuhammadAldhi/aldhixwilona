@@ -15,7 +15,7 @@ const handleSubmit = (e) => {
     const nomorWA = "6287818457387"; 
 
     // Membuat format pesan
-    const text = `Nama ${nama}\nMessage:\n${pesan}`;
+    const text = `Nama: ${nama}\nMessage:\n${pesan}`;
     const encodedText = encodeURIComponent(text);
 
     // Membuka link WhatsApp
